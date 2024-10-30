@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\zxs-svn\\trunk\\C#LeetCode\\C#LeetCode\\C#LeetCode.csproj",
+      "projectUniqueName": "D:\\Fork\\My-Leetcode\\C#LeetCode\\C#LeetCode\\C#LeetCode.csproj",
       "projectName": "C#LeetCode",
-      "projectPath": "D:\\zxs-svn\\trunk\\C#LeetCode\\C#LeetCode\\C#LeetCode.csproj",
+      "projectPath": "D:\\Fork\\My-Leetcode\\C#LeetCode\\C#LeetCode\\C#LeetCode.csproj",
       "packagesPath": "C:\\Users\\zxs123\\.nuget\\packages\\",
-      "outputPath": "D:\\zxs-svn\\trunk\\C#LeetCode\\C#LeetCode\\obj\\",
+      "outputPath": "D:\\Fork\\My-Leetcode\\C#LeetCode\\C#LeetCode\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\zxs123\\AppData\\Roaming\\NuGet\\NuGet.Config",
