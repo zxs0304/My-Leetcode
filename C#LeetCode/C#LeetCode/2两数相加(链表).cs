@@ -6,9 +6,6 @@ using System.Threading.Tasks;
 
 namespace C_LeetCode
 {
-
-
-
     internal class _2两数相加_链表_
     {
         public class ListNode
