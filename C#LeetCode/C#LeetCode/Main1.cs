@@ -14,10 +14,9 @@ namespace C_LeetCode
 
         public static void Main(string[] args)
         {
-            最长中毒时间 test = new 最长中毒时间();
-            int[] arr = new int[] {1,2 };
-            int time = test.CalculatePoisonedTime(arr,5);
-            Console.WriteLine(time);
+            _560和为K的子数组_子串_ t = new _560和为K的子数组_子串_();
+            int[] s = { 1,1,1 };
+            t.SubarraySum(s,2);
         }
 
 
