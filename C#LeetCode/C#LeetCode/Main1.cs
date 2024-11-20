@@ -14,9 +14,8 @@ namespace C_LeetCode
 
         public static void Main(string[] args)
         {
-            _560和为K的子数组_子串_ t = new _560和为K的子数组_子串_();
-            int[] s = { 1,1,1 };
-            t.SubarraySum(s,2);
+            _78子集_回溯_ t = new _78子集_回溯_();
+            t.Subsets(new int[] {1,2,3});
         }
 
 

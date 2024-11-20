@@ -20,7 +20,8 @@ namespace C_LeetCode
                 this.right = right;
             }
         }
-
+        //当前节点为根的最大深度：即 max(leftDepth, rightDepth) + 1 ，其中 leftDepth 和 rightDepth 是左子树和右子树为根的最大深度
+        //跨越当前节点的最大直径：即 leftDepth + rightDepth
         int result = 0;
         public int DiameterOfBinaryTree(TreeNode root)
         {
@@ -34,13 +35,15 @@ namespace C_LeetCode
             {
                 return 0;
             }
+
             int leftDepth = GetMaxDepth(root.left);
             int rightDepth = GetMaxDepth(root.right);
+            // 计算跨越当前节点的最大直径，并更新结果
             if (leftDepth + rightDepth > result)
             {
                 result = leftDepth + rightDepth;
             }
-
+            // 返回当前节点为根的最大深度
             return Math.Max(leftDepth, rightDepth) + 1;
         }
     }

@@ -29,7 +29,7 @@ namespace C_LeetCode
                 return false;
             }
 
-            return dfs(root, 0, targetSum, root);
+            return dfs2(root, 0, targetSum);
         }
         public bool dfs(TreeNode node, int sum, int targetSum, TreeNode preNode)
         {
@@ -67,6 +67,22 @@ namespace C_LeetCode
             else
             {
                 return dfs2(node.left, sum, targetSum) || dfs2(node.right, sum, targetSum);
+            }
+        }
+        //法三更好，比法二少维护一个参数变量
+        public bool dfs3(TreeNode node, int targetSum)
+        {
+            if (node == null)
+            {
+                return false;
+            }
+            if (node.left == null && node.right == null && node.val == targetSum)
+            {
+                return true;
+            }
+            else
+            {
+                return dfs3(node.left, targetSum - node.val) || dfs3(node.right, targetSum - node.val);
             }
         }
 

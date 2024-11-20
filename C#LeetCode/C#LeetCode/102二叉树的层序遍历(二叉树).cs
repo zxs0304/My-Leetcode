@@ -25,12 +25,6 @@ namespace C_LeetCode
         public IList<IList<int>> LevelOrder(TreeNode root)
         {
 
-            //CS0266:无法将类型"System.Collections.Generic.List<System.Collections.Generic.List<int>>”隐式转换
-            //为"System.Colections.Generic.list<System.Colections.Generic.list<int>>"。存在一个显式转换(是否缺少强制转换 ?
-            IList<IList<int>> list = new List<IList<int>>();
-            //或者
-            List<List<int>> list = new List<List<int>>();
-
             IList<IList<int>> result = new List<IList<int>>();
             if (root == null)
                 return result;
