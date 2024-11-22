@@ -8,50 +8,40 @@ namespace C_LeetCode
 {
     internal class _22括号生成_递归_
     {
+
+        //if (left < n) 确保我们不会添加超过 n 个左括号。
+        //if (right<left) 确保在任何时刻，右括号的数量不会超过左括号的数量，以维持有效的括号组合结构。
+        //这两个条件结合在一起，确保了生成的所有括号组合都是有效且符合规则的。
+        IList<string> result = new List<string>();
+        StringBuilder curStr = new StringBuilder();
         public IList<string> GenerateParenthesis(int n)
         {
-            IList<string> allStr = new List<string>();
-            string curStr = "";
-            Digui(0,0,n,curStr,allStr);
-            foreach (var str in allStr)
-            {
-                Console.WriteLine(str);
-            }
-
-            return allStr;
-
+            GenerateParenthesis(n, 0, 0);
+            return result;
         }
-
-        public void Digui(int leftCount , int rightCount , int n ,string curStr, IList<string> allStr)
+        public void GenerateParenthesis(int n, int left, int right)
         {
-            if(leftCount == n && rightCount == n)
+            if (left == n && right == n)
             {
-                allStr.Add(curStr);
+                result.Add(curStr.ToString());
                 return;
             }
 
-            if (leftCount < n) 
+            if (left < n)
             {
-                curStr += "(";
-                Digui(leftCount +1,rightCount,n,curStr,allStr);
-                curStr = curStr.Remove(curStr.Length - 1);
-            }
-            if(rightCount < leftCount)
-            {
-                curStr += ")";
-                Digui(leftCount,rightCount+1,n,curStr,allStr);
-                curStr = curStr.Remove(curStr.Length - 1);
-            }
+                curStr.Append("(");
+                GenerateParenthesis(n, left + 1, right);
+                curStr.Remove(curStr.Length - 1, 1);
 
+            }
+            if (right < left)
+            {
+                curStr.Append(")");
+                GenerateParenthesis(n, left, right + 1);
+                curStr.Remove(curStr.Length - 1, 1);
+            }
 
         }
-
-        //static void Main(string[] args)
-        //{
-        //    _22括号生成_递归_ s = new _22括号生成_递归_();
-        //    s.GenerateParenthesis(3);
-
-        //}
 
     }
 }

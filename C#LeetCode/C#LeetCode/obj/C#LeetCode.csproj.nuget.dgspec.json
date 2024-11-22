@@ -1,27 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Fork\\My-Leetcode\\C#LeetCode\\C#LeetCode\\C#LeetCode.csproj": {}
+    "/Users/duole-15/UnityProject/My-Leetcode/C#LeetCode/C#LeetCode/C#LeetCode.csproj": {}
   },
   "projects": {
-    "D:\\Fork\\My-Leetcode\\C#LeetCode\\C#LeetCode\\C#LeetCode.csproj": {
+    "/Users/duole-15/UnityProject/My-Leetcode/C#LeetCode/C#LeetCode/C#LeetCode.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Fork\\My-Leetcode\\C#LeetCode\\C#LeetCode\\C#LeetCode.csproj",
+        "projectUniqueName": "/Users/duole-15/UnityProject/My-Leetcode/C#LeetCode/C#LeetCode/C#LeetCode.csproj",
         "projectName": "C#LeetCode",
-        "projectPath": "D:\\Fork\\My-Leetcode\\C#LeetCode\\C#LeetCode\\C#LeetCode.csproj",
-        "packagesPath": "C:\\Users\\zxs123\\.nuget\\packages\\",
-        "outputPath": "D:\\Fork\\My-Leetcode\\C#LeetCode\\C#LeetCode\\obj\\",
+        "projectPath": "/Users/duole-15/UnityProject/My-Leetcode/C#LeetCode/C#LeetCode/C#LeetCode.csproj",
+        "packagesPath": "/Users/duole-15/.nuget/packages/",
+        "outputPath": "/Users/duole-15/UnityProject/My-Leetcode/C#LeetCode/C#LeetCode/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\zxs123\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "/Users/duole-15/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -34,11 +32,6 @@
           "warnAsError": [
             "NU1605"
           ]
-        },
-        "restoreAuditProperties": {
-          "enableAudit": "true",
-          "auditLevel": "low",
-          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -60,7 +53,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.404/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.403/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
