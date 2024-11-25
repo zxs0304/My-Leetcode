@@ -16,48 +16,61 @@ namespace C_LeetCode
 输出：false
 解释：总共有 2 门课程。学习课程 1 之前，你需要先完成​课程 0 ；并且学习课程 0 之前，你还应先完成课程 1 。这是不可能的。
 	 */
+
+
     public class _207课程表
 	{
-        // 键是当前课，值是当前课的先行课
-        //Dictionary<int, int> allCourse = new();
-        //int[] visited;
-        //public bool CanFinish(int numCourses, int[][] prerequisites)
-        //{
-        //    visited = new int[numCourses];
-        //    for (int i = 0;i<prerequisites.Length;i++)
-        //    {
-        //        allCourse.Add(prerequisites[i][0], prerequisites[i][1]);
-        //    }
+        // 广度优先。创建一个后置课程表 记录每个课程的后置课程。 创建一个入度数组 记录每个课程所需的先行课数。
+        // 每次修一个入度为0的课程（即该课程没有先修课程），然后把该课程对应的后置课程的入度减一，直到修完所有入度为0的课程，判断是否还有未休的课程
+        public bool CanFinish(int numCourses, int[][] prerequisites)
+        {
+            // 创建邻接表(后置课程表)
+            // 由于当学完当前课程后，需要更新所有当前课程的后置课程的入度，因此 索引是当前课程号，值是 所有以当前课程为先行课的课程。(也就是当前课程的后置课程)
+            var postCourses = new List<List<int>>(numCourses);
 
-        //}
+            // 创建入度数组，入度：一个课程所需要的先行课数量。因此 索引是当前课程号，值是当前课程所需要的先行课的数量
+            var indegree = new int[numCourses];
 
-        //public bool CanLearn(int course)
-        //{
-        //    visited[course] = 2;
+            // 初始化后置课程表
+            for (int i = 0; i < numCourses; i++)
+            {
+                postCourses.Add(new List<int>());
+            }
 
-        //    if (visited[course] == 1)
-        //    {
-        //        return true;
-        //    }
-        //    if (visited[course] == -1)
-        //    {
-        //        return false;
-        //    }
+            // 填充后置课程表和入度数组
+            foreach (var item in prerequisites)
+            {
+                int curCourse = item[0];
+                int preCourse = item[1];
+                postCourses[preCourse].Add(curCourse);
+                indegree[curCourse]++;
+            }
+            // 初始化队列
+            var queue = new Queue<int>();
+            for (int i = 0; i < numCourses; i++)
+            {
+                if (indegree[i] == 0)
+                {
+                    queue.Enqueue(i);
+                }
+            }
+            int canLearnCourse = 0;
+            while (queue.Count > 0)
+            {
+                int curCourse = queue.Dequeue();
+                canLearnCourse++;
+                foreach (var postCourse in postCourses[curCourse])
+                {
+                    indegree[postCourse]--;
+                    if (indegree[postCourse] == 0)
+                    {
+                        queue.Enqueue(postCourse);
+                    }
+                }
 
-        //    if (!allCourse.ContainsKey(course))
-        //    {
-        //        visited[course] = 1;
-        //        return true;
-        //    }
-        //    else if (visited[course] == 0 && CanLearn(allCourse[course]) )
-        //    {
-        //        visited[course] = 1;
-        //        return true;
-        //    }
-
-        //    visited[course] = -1;
-        //    return false;
-        //}
+            }
+            return canLearnCourse == numCourses;
+        }
 
     }
 }
