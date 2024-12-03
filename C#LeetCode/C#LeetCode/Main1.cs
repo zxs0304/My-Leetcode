@@ -14,17 +14,10 @@ namespace C_LeetCode
 
         public static void Main(string[] args)
         {
-            _73矩阵置零_矩阵_ t = new _73矩阵置零_矩阵_();
+            _152乘积最大的子数组_dp_ t = new _152乘积最大的子数组_dp_();
 
-            t.SetZeroes(
-                new int[][]
-                {
-                new int[] { 1, 0,1 },          // 第一个子数组
-                new int[] { 1, 0, 1 },       // 第二个子数组
-                new int[] { 1,1,1 }               // 第三个子数组
-                }
-        );
-
+            var result = t.MaxProduct1(new int[] {-4 ,-3,-2});
+            Console.WriteLine(result);
         }
 
 

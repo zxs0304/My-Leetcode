@@ -43,7 +43,9 @@ namespace C_LeetCode
             return max;
         }
 
-        // 法二：由于dp数组只用到了dp[i-1]，因此可以进行空间优化，只用一个变量来存储上一个的最大值，而不需要一整个数组
+        // 法二：由于dp数组只用到了dp[i-1]，因此可以进行空间优化，
+        // 只用一个变量来存储上一个的最大值，而不需要一整个数组
+        // 但是注意在每一轮更新最大值和最小值时，与法一有一点不同
         public int MaxProduct1(int[] nums)
         {
             int n = nums.Length;
@@ -54,8 +56,11 @@ namespace C_LeetCode
             int max = nums[0];
             for (int i = 1; i < n; i++)
             {
+                // 保存当前的最大乘积
+                int tempMax = curMax;
                 curMax = Math.Max(nums[i], Math.Max(curMax * nums[i], curMin * nums[i]));
-                curMin = Math.Min(nums[i], Math.Min(curMax * nums[i], curMin * nums[i]));
+                // !!!注意这里不能用curMax来计算，而是用tempMax,因为curMax上一步刚刚被更新过了，不再是上一轮中的最大值
+                curMin = Math.Min(nums[i], Math.Min(tempMax * nums[i], curMin * nums[i]));
                 max = Math.Max(max, curMax);
             }
             return max;
