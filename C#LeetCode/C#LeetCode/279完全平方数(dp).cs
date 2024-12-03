@@ -20,7 +20,7 @@ namespace C_LeetCode
 解释：13 = 4 + 9
 	 */
     public class _279完全平方数_dp_
-	{
+    {
         // 类似322.零钱兑换
         public int NumSquares(int n)
         {
@@ -54,7 +54,7 @@ namespace C_LeetCode
                 {
                     if (coins[j] <= i)
                     {
-                        dp[i] = Math.Min(dp[i] , dp[i - coins[j]] + 1);
+                        dp[i] = Math.Min(dp[i], dp[i - coins[j]] + 1);
                     }
                 }
             }
