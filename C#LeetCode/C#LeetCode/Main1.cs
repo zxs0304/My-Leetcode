@@ -20,6 +20,26 @@ namespace C_LeetCode
             Console.WriteLine(result);
         }
 
+        public int Rob(int[] nums)
+        {
+            int n = nums.Length;
+            int[] dp = new int[n+1];
+            dp[0] = nums[0];
+
+            for (int i = 1;i<n;i++)
+            {
+                if (i == 1)
+                {
+                    dp[1] = Math.Max(dp[0], 0 + nums[1]);
+                }
+                else
+                {
+                    dp[i] = Math.Max(dp[i - 1], dp[i - 2] + nums[i]);
+                }
+
+            }
+
+        }
 
     }
 }
