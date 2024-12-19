@@ -24,7 +24,7 @@ using namespace std;
 
     //80.删除有序数组中的重复项II
     // 左指针left维护当前满足条件的数字，右指针right向右遍历新数字
-    int removeDuplicates(vector<int>& nums) {
+    int removeDuplicates2(vector<int>& nums) {
         int left = 2;
         int right = 2;
         int n = nums.size();

@@ -18,7 +18,16 @@
     <ClCompile Include="C++LeetCode.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="88合并两个有序数组(数组).cpp">
+    <ClCompile Include="26删除有序数组的重复项_双指针.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="27移除元素_数组.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="88合并两个有序数组_数组.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="169多数元素_摩尔法.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>

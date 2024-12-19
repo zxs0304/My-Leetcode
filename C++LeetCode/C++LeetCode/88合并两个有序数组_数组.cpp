@@ -37,9 +37,3 @@ public:
     }
 };
 
-int main()
-{
-    vector<int> test;
-    test.push_back(1);
-    std::cout << "Hello wrrrld!\n";
-}
