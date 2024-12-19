@@ -5,7 +5,7 @@ using namespace std;
 class Solution
 {
 public:
-    //Èı¸öÖ¸Õë£¬´ÓºóÍùÇ°±éÀú
+    //ï¿½ï¿½ï¿½ï¿½Ö¸ï¿½ë£¬ï¿½Óºï¿½ï¿½ï¿½Ç°ï¿½ï¿½ï¿½ï¿½
     void merge(vector<int>& nums1, int m, vector<int>& nums2, int n)
     {
         int last = m + n - 1;
@@ -27,7 +27,7 @@ public:
             last--;
         }
 
-        //Ö»ĞèÒªµ¥¶À´¦Àínums2Ê£ÓàµÄ²¿·Ö
+        //Ö»ï¿½ï¿½Òªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½nums2Ê£ï¿½ï¿½Ä²ï¿½ï¿½ï¿½
         while (p2 >= 0)
         {
             nums1[last] = nums2[p2];
@@ -36,3 +36,10 @@ public:
         }
     }
 };
+
+int main()
+{
+    vector<int> test;
+    test.push_back(1);
+    std::cout << "Hello wrrrld!\n";
+}
