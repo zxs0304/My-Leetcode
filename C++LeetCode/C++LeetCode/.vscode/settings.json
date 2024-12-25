@@ -13,7 +13,8 @@
         "iostream": "cpp",
         "map": "cpp",
         "algorithm": "cpp",
-        "initializer_list": "cpp"
+        "initializer_list": "cpp",
+        "__locale": "cpp"
     },
     "C_Cpp.vcFormat.indent.preserveWithinParentheses": true
 }
