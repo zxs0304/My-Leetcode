@@ -14,7 +14,18 @@
         "map": "cpp",
         "algorithm": "cpp",
         "initializer_list": "cpp",
-        "__locale": "cpp"
+        "__locale": "cpp",
+        "__hash_table": "cpp",
+        "__split_buffer": "cpp",
+        "__tree": "cpp",
+        "array": "cpp",
+        "bitset": "cpp",
+        "deque": "cpp",
+        "queue": "cpp",
+        "stack": "cpp",
+        "string": "cpp",
+        "string_view": "cpp",
+        "unordered_map": "cpp"
     },
     "C_Cpp.vcFormat.indent.preserveWithinParentheses": true
 }
