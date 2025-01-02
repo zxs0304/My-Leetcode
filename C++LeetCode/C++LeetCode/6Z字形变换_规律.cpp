@@ -7,32 +7,27 @@
  /*
 */
 
-    string convert(string s, int numRows) 
-    {
-        vector<vector<char>> result(numRows);
-        int dir = -1;
-        int rowIndex = 0;
-        for(int i = 0;i<s.size();i++)
-        {
-            if(rowIndex == 0 || rowIndex == numRows-1)
-            {
-                dir = -dir;
-            }
-
-            result[rowIndex].push_back(s[i]);
-
-            rowIndex += dir;
-        }
-        string newStr ="";
-        // 按顺序遍历二维 vector
-        for (int i = 0; i < result.size(); ++i) 
-        { // 遍历行
-            for (int j = 0; j < result[i].size(); ++j) 
-            { // 遍历列
-                newStr += result[i][j];
-            }
-        }
-    }
+// 先push当前字符，再 加或减 flag
+ string convert(string s, int numRows)
+ {
+     if (numRows < 2)
+         return s;
+     //默认值为空字符串
+     vector<string> rows(numRows);
+     int i = 0, flag = -1;
+     for (char c : s)
+     {
+         rows[i].push_back(c);
+         if (i == 0 || i == numRows - 1)
+             flag = -flag;
+         i += flag;
+     }
+     string res;
+     //如果不写引用也对，但是是值拷贝，浪费内存
+     for (string& row : rows)
+         res += row;
+     return res;
+ }
 
 int main()
 {
