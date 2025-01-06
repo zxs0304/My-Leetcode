@@ -25,7 +25,8 @@
         "stack": "cpp",
         "string": "cpp",
         "string_view": "cpp",
-        "unordered_map": "cpp"
+        "unordered_map": "cpp",
+        "ios": "cpp"
     },
     "C_Cpp.vcFormat.indent.preserveWithinParentheses": true
 }
