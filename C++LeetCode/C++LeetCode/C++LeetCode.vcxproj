@@ -127,11 +127,30 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="105从前序和中序遍历构建二叉树_二叉树.cpp" />
+    <ClCompile Include="122买卖股票的最佳时机_dp.cpp" />
+    <ClCompile Include="134加油站_数组.cpp" />
+    <ClCompile Include="151反转字符串的单词_双指针.cpp" />
+    <ClCompile Include="15三数之和_双指针.cpp" />
+    <ClCompile Include="167两数之和_双指针.cpp" />
     <ClCompile Include="169多数元素_摩尔法.cpp" />
+    <ClCompile Include="189轮转数组_数组.cpp" />
+    <ClCompile Include="209长度最小的子数组_滑动窗口.cpp" />
+    <ClCompile Include="238除自身以外数组的乘积_数组.cpp" />
     <ClCompile Include="26删除有序数组的重复项_双指针.cpp" />
+    <ClCompile Include="274H指数_数组.cpp" />
     <ClCompile Include="27移除元素_数组.cpp" />
+    <ClCompile Include="3138同位字符串连接的最小长度_哈希表.cpp" />
+    <ClCompile Include="380O_1_插入和删除.cpp" />
+    <ClCompile Include="42接雨水_dp.cpp" />
+    <ClCompile Include="55跳跃游戏_贪心.cpp" />
+    <ClCompile Include="6Z字形变换_规律.cpp" />
     <ClCompile Include="88合并两个有序数组_数组.cpp" />
     <ClCompile Include="C++LeetCode.cpp" />
+    <ClCompile Include="JZ11旋转数组的最小数字_二分.cpp" />
+    <ClCompile Include="JZ8二叉树的下一个节点_二叉树.cpp" />
+    <ClCompile Include="JZ9用两个栈实现队列_栈.cpp" />
+    <ClCompile Include="JZ12矩阵中的路径_递归.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
